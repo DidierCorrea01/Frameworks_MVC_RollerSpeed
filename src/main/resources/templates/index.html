@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Roller Speed - Inicio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/estilos.css}">
+</head>
+<body>
+
+<nav th:replace="~{fragments/navbar :: navbar}"></nav>
+
+<section class="hero-rs">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-7">
+                <h1>ROMPE TU PROPIO RÉCORD</h1>
+                <p class="lead" style="color: var(--text-muted); max-width: 480px;">
+                    Escuela de patinaje de velocidad en Santa Marta, Colombia. Formamos deportistas
+                    desde el primer giro hasta el podio.
+                </p>
+                <a href="#quienes-somos" class="btn btn-rs mt-2">Conoce más</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="quienes-somos" class="section-rs">
+    <div class="container">
+        <h2 class="mb-4">¿Quiénes somos?</h2>
+        <p style="color: var(--text-muted); max-width: 700px;">
+            Roller Speed es una escuela de patinaje dedicada a la formación de niños, jóvenes y adultos
+            en el deporte del patinaje de velocidad, promoviendo la disciplina, el trabajo en equipo y
+            la vida saludable a través del deporte.
+        </p>
+    </div>
+</section>
+
+<footer class="footer-rs text-center">
+    <p class="mb-0">&copy; 2026 Roller Speed</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
