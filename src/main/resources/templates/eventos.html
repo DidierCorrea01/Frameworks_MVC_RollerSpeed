@@ -17,39 +17,15 @@
     <div class="container" style="max-width: 760px;">
         <h1 class="mb-4">Eventos de la escuela</h1>
 
-        <div class="evento-card">
+        <div class="evento-card" th:each="evento : ${eventos}">
             <div class="evento-fecha">
-                <div class="dia">15</div>
-                <div class="mes">Sep</div>
+                <div class="dia" th:text="${evento.dia}">00</div>
+                <div class="mes" th:text="${evento.mes}">Mes</div>
             </div>
             <div>
-                <span class="evento-tag">Interno</span>
-                <div class="evento-titulo">Torneo interno de patinaje</div>
-                <div class="evento-detalle">9:00 a.m. · Pista principal Roller Speed</div>
-            </div>
-        </div>
-
-        <div class="evento-card">
-            <div class="evento-fecha">
-                <div class="dia">28</div>
-                <div class="mes">Sep</div>
-            </div>
-            <div>
-                <span class="evento-tag">Comunidad</span>
-                <div class="evento-titulo">Jornada de puertas abiertas</div>
-                <div class="evento-detalle">3:00 p.m. · Entrada libre para nuevos aspirantes</div>
-            </div>
-        </div>
-
-        <div class="evento-card">
-            <div class="evento-fecha">
-                <div class="dia">10</div>
-                <div class="mes">Oct</div>
-            </div>
-            <div>
-                <span class="evento-tag">Regional</span>
-                <div class="evento-titulo">Copa regional de patinaje de velocidad</div>
-                <div class="evento-detalle">8:00 a.m. · Santa Marta, Magdalena</div>
+                <span class="evento-tag" th:text="${evento.categoria}">Categoría</span>
+                <div class="evento-titulo" th:text="${evento.titulo}">Título</div>
+                <div class="evento-detalle" th:text="${evento.detalle}">Detalle</div>
             </div>
         </div>
 

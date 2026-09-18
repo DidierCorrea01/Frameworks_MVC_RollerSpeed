@@ -17,25 +17,13 @@
     <div class="container">
         <h1 class="mb-4">Nuestros servicios</h1>
         <div class="row g-4">
-            <div class="col-md-4">
-                <div class="card-rs servicio-card" tabindex="0">
-                    <h3>Clases para principiantes</h3>
-                    <p style="color: var(--text-muted);">Iniciación al patinaje para niños y adultos sin experiencia previa.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card-rs servicio-card" tabindex="0">
-                    <h3>Entrenamiento de velocidad</h3>
-                    <p style="color: var(--text-muted);">Preparación física y técnica orientada a la competencia.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card-rs servicio-card" tabindex="0">
-                    <h3>Preparación para competencias</h3>
-                    <p style="color: var(--text-muted);">Entrenamiento especializado para torneos regionales y nacionales.</p>
-                </div>
-            </div>
+    <div class="col-md-4" th:each="servicio : ${servicios}">
+        <div class="card-rs servicio-card" tabindex="0">
+            <h3 th:text="${servicio.titulo}">Título</h3>
+            <p style="color: var(--text-muted);" th:text="${servicio.descripcion}">Descripción</p>
         </div>
+    </div>
+</div>
     </div>
 </section>
 

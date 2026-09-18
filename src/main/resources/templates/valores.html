@@ -19,38 +19,10 @@
         <p style="color: var(--text-muted);">Pasa el cursor sobre cada valor para conocer más.</p>
         <div class="row g-3 mt-2">
 
-            <div class="col-md-4">
+            <div class="col-md-4" th:each="valor : ${valores}">
                 <div class="card-rs valor-card" tabindex="0">
-                    <h3>Disciplina</h3>
-                    <p class="valor-desc">Cumplir horarios de entrenamiento y seguir la metodología con constancia, dentro y fuera de la pista.</p>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card-rs valor-card" tabindex="0">
-                    <h3>Respeto</h3>
-                    <p class="valor-desc">Hacia compañeros, instructores y rivales, tanto en el entrenamiento como en la competencia.</p>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card-rs valor-card" tabindex="0">
-                    <h3>Trabajo en equipo</h3>
-                    <p class="valor-desc">El patinaje también se entrena en grupo: apoyarse mutuamente hace mejores atletas.</p>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card-rs valor-card" tabindex="0">
-                    <h3>Constancia</h3>
-                    <p class="valor-desc">Los resultados en el patinaje de velocidad llegan con la práctica sostenida en el tiempo.</p>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card-rs valor-card" tabindex="0">
-                    <h3>Superación personal</h3>
-                    <p class="valor-desc">Cada alumno compite primero contra su propio récord, antes que contra los demás.</p>
+                    <h3 th:text="${valor.nombre}">Nombre</h3>
+                    <p class="valor-desc" th:text="${valor.descripcion}">Descripción</p>
                 </div>
             </div>
 
